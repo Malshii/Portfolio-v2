@@ -20,6 +20,14 @@
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
 }
 
+.top-nav nav {
+  min-width: 0;
+}
+
+.top-nav nav a {
+  white-space: nowrap;
+}
+
 .brand {
   font-family: var(--font-display), "Segoe UI", sans-serif;
   text-transform: uppercase;

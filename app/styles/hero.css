@@ -3,7 +3,8 @@
 .hero-stage {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100svh;
+  height: auto;
   overflow: hidden;
   background:
     radial-gradient(
@@ -43,8 +44,9 @@
 
 .hero-shell {
   position: relative;
-  width: min(1280px, calc(100% - 3rem));
+  width: min(1280px, 100%);
   margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -54,11 +56,11 @@
 .portfolio-shell {
   position: relative;
   z-index: 10;
-  width: min(1180px, calc(100% - 8rem));
+  width: min(1180px, 100%);
   margin: 0 auto;
   display: grid;
   gap: 2.8rem;
-  padding: 0 4rem;
+  padding: 0 clamp(1rem, 4vw, 4rem);
 }
 
 .hero {
@@ -67,7 +69,7 @@
   align-items: center;
   grid-template-columns: 1fr 1.2fr;
   position: relative;
-  padding: 0;
+  padding: clamp(5.5rem, 9vh, 7rem) 0 0;
 }
 
 .hero::before {
@@ -125,15 +127,16 @@
 .hero-center {
   display: grid;
   place-items: center;
-  min-height: 600px;
+  min-height: clamp(360px, 56vh, 600px);
   position: relative;
   justify-self: center;
 }
 
 .hero-image-wrapper {
   position: relative;
-  width: 420px;
-  height: 520px;
+  width: min(420px, 78vw);
+  aspect-ratio: 21 / 26;
+  height: auto;
   overflow: visible;
   isolation: isolate;
 }
