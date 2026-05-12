@@ -1,0 +1,72 @@
+/* Projects section and project cards */
+
+.project-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-grid::-webkit-scrollbar-thumb {
+  background: rgba(193, 55, 51, 0.5);
+  border-radius: 999px;
+}
+
+.project-card {
+  scroll-snap-align: start;
+}
+
+.project-card .thumb {
+  height: 160px;
+  border-radius: 1rem;
+  display: grid;
+  place-content: end start;
+  padding: 0.8rem;
+  border: 1px solid rgba(230, 241, 255, 0.14);
+  background:
+    radial-gradient(circle at 24% 24%, rgba(193, 55, 51, 0.3), transparent 55%),
+    radial-gradient(
+      circle at 85% 76%,
+      rgba(160, 160, 160, 0.25),
+      transparent 55%
+    ),
+    linear-gradient(145deg, #000000, rgba(160, 160, 160, 0.18));
+}
+
+.project-card .thumb span {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.28rem 0.48rem;
+  color: #ffffff;
+}
+
+.project-card h3 {
+  margin: 0.9rem 0 0;
+}
+
+.project-card .stack {
+  color: var(--electric-cyan);
+  margin: 0.4rem 0 0.56rem;
+  font-size: 0.9rem;
+}
+
+.project-card p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.project-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.62rem;
+  flex-wrap: wrap;
+}

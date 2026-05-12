@@ -1,0 +1,55 @@
+/* Contact section and form styles */
+
+.contact-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.86rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.34rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid rgba(230, 241, 255, 0.2);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--soft-white);
+  padding: 0.72rem 0.88rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(193, 55, 51, 0.72);
+  box-shadow: 0 0 0 3px rgba(193, 55, 51, 0.2);
+}
+
+.contact-info {
+  overflow: hidden;
+}
+
+.contact-info h3 {
+  margin: 0.5rem 0 0;
+}
+
+.contact-info p {
+  margin: 0.56rem 0 0;
+}
+
+.contact-info .social-row a {
+  width: auto;
+  height: auto;
+  border-radius: 999px;
+  padding: 0.43rem 0.78rem;
+  font-size: 0.86rem;
+}

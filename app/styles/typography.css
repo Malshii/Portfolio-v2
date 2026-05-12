@@ -1,0 +1,19 @@
+/* Typography and section heading styles */
+
+section h2 {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: clamp(1.65rem, 3.1vw, 2.5rem);
+  margin: 0 0 0.85rem;
+  text-shadow: 0 0 14px rgba(193, 55, 51, 0.2);
+}
+
+.section-subtitle {
+  margin: 0 0 1.2rem;
+  color: var(--text-muted);
+}
+
+.about-intro,
+.contact p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 72ch;
+}

@@ -1,0 +1,94 @@
+/* Social media icons styles */
+
+.hero-highlights {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hero-social {
+  position: absolute;
+  width: 4.2rem;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.hero-social svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.hero-social:hover {
+  transform: scale(1.08);
+  border-color: rgba(193, 55, 51, 0.7);
+  box-shadow: 0 0 20px rgba(193, 55, 51, 0.35);
+}
+
+/* Unique positions for 6 social icons */
+.social-1 {
+  top: -36px;
+  left: 32px;
+}
+
+.social-2 {
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social-3 {
+  top: -36px;
+  right: 32px;
+}
+
+.social-4 {
+  top: 50%;
+  right: -48px;
+  transform: translateY(-50%);
+}
+
+.social-5 {
+  bottom: -36px;
+  right: 32px;
+}
+
+.social-6 {
+  top: 50%;
+  left: -48px;
+  transform: translateY(-50%);
+}
+
+.social-row a {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  border: 1px solid rgba(230, 241, 255, 0.24);
+  color: rgba(255, 255, 255, 0.82);
+  transition: all 200ms ease;
+}
+
+.social-row a svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.social-row a:hover {
+  color: var(--soft-white);
+  border-color: rgba(193, 55, 51, 0.7);
+  box-shadow: 0 0 16px rgba(193, 55, 51, 0.3);
+}

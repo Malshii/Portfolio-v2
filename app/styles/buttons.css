@@ -1,0 +1,33 @@
+/* Button and CTA styles */
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.74rem 1.24rem;
+  font-weight: 600;
+  transition:
+    transform 230ms ease,
+    box-shadow 230ms ease,
+    border-color 230ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, #c13733, #a0a0a0, #ffffff);
+  color: #000000;
+  box-shadow: 0 12px 30px rgba(193, 55, 51, 0.32);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.24);
+  color: var(--soft-white);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(193, 55, 51, 0.55);
+  box-shadow: 0 0 20px rgba(193, 55, 51, 0.22);
+}

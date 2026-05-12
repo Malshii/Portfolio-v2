@@ -1,0 +1,95 @@
+/* Responsive media queries for smaller screens */
+
+@media (max-width: 980px) {
+  .hero,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    border-left: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.72);
+    padding-left: 0;
+    padding-top: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-center {
+    min-height: 0;
+  }
+
+  .hero-highlights {
+    position: static;
+    inset: auto;
+    pointer-events: auto;
+    display: grid;
+    gap: 0.9rem;
+    padding-left: 0;
+    z-index: auto;
+  }
+
+  .hero-social {
+    position: static;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .station-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .top-nav {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    justify-items: center;
+  }
+
+  .top-nav nav {
+    gap: 0.68rem;
+  }
+
+  .hero-copy h1 {
+    line-height: 1.05;
+  }
+
+  .hero-summary {
+    font-size: 1.45rem;
+  }
+
+  .hero-social {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .hero-social svg {
+    width: 1.45rem;
+    height: 1.45rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .timeline-list::before {
+    left: 10px;
+  }
+
+  .timeline-card {
+    margin-left: 1.5rem;
+  }
+
+  .timeline-card::before {
+    left: -1.34rem;
+  }
+}

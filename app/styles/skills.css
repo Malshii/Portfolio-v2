@@ -1,0 +1,119 @@
+/* Skills section and skill cards */
+
+.station-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.station-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.station-card p {
+  margin: 0.55rem 0 0;
+  color: var(--text-muted);
+}
+
+.mini-timeline {
+  margin-top: 1rem;
+}
+
+.mini-timeline h3 {
+  margin: 0;
+}
+
+.mini-timeline ul {
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.mini-timeline li {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.mini-timeline span {
+  color: var(--electric-cyan);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skill-card {
+  min-height: 280px;
+}
+
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.skill-head h3 {
+  margin: 0;
+}
+
+.skill-head span {
+  font-size: 0.76rem;
+  color: var(--aurora-green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.skill-cloud {
+  margin-top: 0.9rem;
+  height: 180px;
+  position: relative;
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at center, rgba(193, 55, 51, 0.14), transparent 58%),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(230, 241, 255, 0.1);
+}
+
+.skill-cloud-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(193, 55, 51, 0.5);
+  background: rgba(193, 55, 51, 0.16);
+  color: #ffffff;
+}
+
+.skill-pill {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 0.24rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  border: 1px solid rgba(160, 160, 160, 0.35);
+  background: rgba(160, 160, 160, 0.16);
+  color: #ffffff;
+  animation: riseIn 620ms ease both;
+}
+
+.skill-tools {
+  margin: 0.95rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+}

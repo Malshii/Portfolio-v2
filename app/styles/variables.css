@@ -1,0 +1,19 @@
+/* Theme variables and color definitions */
+:root {
+  --space-black: #000000;
+  --cosmic-navy: #000000;
+  --electric-cyan: #c13733;
+  --neon-violet: #a0a0a0;
+  --aurora-green: #c13733;
+  --solar-orange: #c13733;
+  --soft-white: #ffffff;
+
+  --text-muted: #a0a0a0;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --shadow-deep: 0 24px 60px rgba(0, 0, 0, 0.5);
+
+  --font-open-sans: 'Open Sans', Arial, Helvetica, sans-serif;
+  --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+}

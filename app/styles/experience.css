@@ -1,0 +1,58 @@
+/* Experience and timeline styles */
+
+.timeline-list {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  bottom: 16px;
+  width: 2px;
+  background: linear-gradient(#ffffff, #c13733, #a0a0a0);
+  box-shadow: 0 0 14px rgba(193, 55, 51, 0.35);
+}
+
+.timeline-card {
+  position: relative;
+  margin-left: 2.2rem;
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  left: -2.05rem;
+  top: 1.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #c13733;
+  background: #000000;
+  box-shadow: 0 0 12px rgba(193, 55, 51, 0.38);
+}
+
+.timeline-card .time {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.75rem;
+  color: var(--aurora-green);
+}
+
+.timeline-card h3 {
+  margin: 0.44rem 0 0;
+}
+
+.timeline-card h4 {
+  margin: 0.28rem 0 0;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.timeline-card p {
+  margin: 0.5rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+}
