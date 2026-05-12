@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="hero section-reveal">
       <div className="hero-copy">
         <p className="hero-kicker">Hello, I'm</p>
-        <h1>Malshi Kulasinghe</h1>
+        <h1>Malshi <span>Kulasinghe</span></h1>
         <p className="hero-summary">
           Software Engineer with industry experience in building scalable
           full-stack applications using React, Redux, and Node.js. Strong in

@@ -2,7 +2,9 @@ export default function ExperienceSection({ timeline }) {
   return (
     <section className="timeline section-reveal" id="experience">
       <h2>Experience Timeline</h2>
-      <p className="section-subtitle">Progress across engineering, cloud, and product delivery.</p>
+      <p className="section-subtitle">
+        Progress across engineering, cloud, and product delivery.
+      </p>
       <div className="timeline-list">
         {timeline.map((item) => (
           <article key={item.title} className="glass-card timeline-card">

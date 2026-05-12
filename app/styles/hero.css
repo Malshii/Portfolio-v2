@@ -69,7 +69,7 @@
   align-items: center;
   grid-template-columns: 1fr 1.2fr;
   position: relative;
-  padding: clamp(5.5rem, 9vh, 7rem) 0 0;
+  padding: clamp(8rem, 9vh, 7rem) 0 0;
 }
 
 .hero::before {
@@ -97,9 +97,10 @@
 .hero-kicker {
   color: var(--aurora-green);
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.14em;
   margin: 0;
+  font-weight: bold;
 }
 
 .hero-copy h1 {
@@ -108,6 +109,10 @@
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
   line-height: 1.08;
   text-shadow: 0 0 20px rgba(193, 55, 51, 0.2);
+}
+
+.hero-copy h1 span {
+    color: var(--electric-cyan);
 }
 
 .hero-summary {

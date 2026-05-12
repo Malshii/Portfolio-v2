@@ -1,15 +1,4 @@
-import { Orbitron, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
-const displayFont = Orbitron({
-  variable: "--font-display",
-  subsets: ["latin"],
-});
-
-const bodyFont = Space_Grotesk({
-  variable: "--font-body",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Malshi Kulasinghe | Software Engineer Portfolio",
@@ -19,10 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full scroll-smooth antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
