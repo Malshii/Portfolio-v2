@@ -39,35 +39,34 @@
 
 /* Unique positions for 6 social icons */
 .social-1 {
-  top: -36px;
-  left: 32px;
+  top: -16px;
+  left: 52px;
 }
 
 .social-2 {
-  top: -48px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -18px;
+  left: 58px;
 }
 
 .social-3 {
-  top: -36px;
-  right: 32px;
+  top: -16px;
+  right: 52px;
 }
 
 .social-4 {
   top: 50%;
-  right: -48px;
+  right: -26px;
   transform: translateY(-50%);
 }
 
 .social-5 {
-  bottom: -36px;
-  right: 32px;
+  bottom: -18px;
+  right: 52px;
 }
 
 .social-6 {
-  top: 50%;
-  left: -48px;
+  top: 52%;
+  left: -26px;
   transform: translateY(-50%);
 }
 
