@@ -35,6 +35,9 @@ h6,
 /* Social media icons */
 @import "./styles/social.css";
 
+/* About section */
+@import "./styles/about.css";
+
 /* Button styles */
 @import "./styles/buttons.css";
 

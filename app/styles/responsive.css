@@ -45,9 +45,9 @@
     padding-top: 0;
   }
 
-  .portfolio-shell {
+  /* .portfolio-shell {
     gap: 2rem;
-  }
+  } */
 
   .hero-copy {
     border-left: none;
@@ -85,10 +85,6 @@
     grid-auto-columns: minmax(260px, 1fr);
   }
 
-  .station-grid {
-    grid-template-columns: 1fr;
-  }
-
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -119,9 +115,9 @@
     width: min(340px, 84vw);
   }
 
-  .portfolio-shell {
+  /* .portfolio-shell {
     padding: 0 1rem;
-  }
+  } */
 
   .hero-social {
     width: 3rem;

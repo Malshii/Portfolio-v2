@@ -17,13 +17,11 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="portfolio-shell">
-        <AboutSection />
-        <SkillsSection skills={skills} />
-        <ProjectsSection projects={projects} />
-        <ExperienceSection timeline={timeline} />
-        <ContactSection />
-      </main>
+      <AboutSection />
+      <SkillsSection skills={skills} />
+      <ProjectsSection projects={projects} />
+      <ExperienceSection timeline={timeline} />
+      <ContactSection />
 
       <footer className="site-footer">
         <p>Built with clarity, craft, and purpose.</p>

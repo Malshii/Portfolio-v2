@@ -1,22 +1,4 @@
 /* Skills section and skill cards */
-
-.station-grid {
-  margin-top: 1.2rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.station-card h3 {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-.station-card p {
-  margin: 0.55rem 0 0;
-  color: var(--text-muted);
-}
-
 .mini-timeline {
   margin-top: 1rem;
 }

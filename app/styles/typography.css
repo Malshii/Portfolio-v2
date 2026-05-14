@@ -12,7 +12,6 @@ section h2 {
   color: var(--text-muted);
 }
 
-.about-intro,
 .contact p {
   color: rgba(255, 255, 255, 0.82);
   max-width: 72ch;
