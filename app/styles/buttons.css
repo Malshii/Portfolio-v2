@@ -19,6 +19,7 @@
   background: linear-gradient(120deg, #c13733, #a0a0a0, #ffffff);
   color: #000000;
   box-shadow: 0 12px 30px rgba(193, 55, 51, 0.32);
+  text-align: center;
 }
 
 .btn-secondary {

@@ -1,3 +1,22 @@
+/* Font family setup for the entire project */
+html,
+body {
+  font-family:
+    "Open Sans", "Open Sans Fallback", Roboto, "Roboto Fallback", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading,
+.hero-kicker,
+.hero-copy h1,
+.hero-copy span {
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+}
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
 @import "tailwindcss";
 

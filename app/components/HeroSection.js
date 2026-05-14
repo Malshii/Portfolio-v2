@@ -5,8 +5,10 @@ export default function HeroSection() {
     <section className="hero section-reveal">
       <div className="hero-copy">
         <p className="hero-kicker">Hello, I'm</p>
-        <h1>Malshi <span>Kulasinghe</span></h1>
-        <p className="hero-summary">
+        <h1 className="hero-title">
+          Malshi <span className="hero-title-accent">Kulasinghe</span>
+        </h1>
+        <p className="hero-summary hero-summary-styled">
           Software Engineer with industry experience in building scalable
           full-stack applications using React, Redux, and Node.js. Strong in
           frontend development, API integration, and database-driven systems,
@@ -15,8 +17,27 @@ export default function HeroSection() {
         </p>
 
         <div className="hero-actions">
-          <a href="#contact" className="btn btn-secondary">
-            Contact
+          <a
+            href="#contact"
+            className="btn btn-primary hero-hireme-btn"
+          >
+            Hire Me
+          </a>
+          <a
+            href="#projects"
+            className="btn btn-secondary hero-latestwork-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="bi bi-code-slash"
+              viewBox="0 0 16 16"
+            >
+              <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
+            </svg>
+            Latest Work
           </a>
         </div>
       </div>
