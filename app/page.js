@@ -19,8 +19,8 @@ export default function Home() {
 
       <AboutSection />
       <SkillsSection skills={skills} />
-      {/* <ProjectsSection projects={projects} />
-      <ExperienceSection timeline={timeline} />
+      <ProjectsSection projects={projects} />
+      {/* <ExperienceSection timeline={timeline} />
       <ContactSection /> */}
 
       <footer className="site-footer">
