@@ -93,10 +93,12 @@ export default function AboutSection() {
         <div className="about-content">
           <h2 className="about-title">About me</h2>
           <p className="about-description">
-            I started my software journey from photography. Through that, I
-            learned to love the process of creating from scratch. Since then,
-            this has led me to software development as it fulfills my love for
-            learning and building things.
+            A highly creative and hardworking individual, I love trying out the
+            newest technologies and creating user-focused solutions. As a
+            Software Engineer at GDC Consultants Ltd. with a Bachelor's degree
+            in Information Technology & Management from the University of
+            Moratuwa, I am eager for new challenges to grow as a tech
+            professional.
           </p>
           <div className="about-stats">
             <div className="about-stat">

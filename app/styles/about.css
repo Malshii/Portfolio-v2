@@ -6,7 +6,7 @@
   margin: 0 auto;
   box-sizing: border-box;
   background: transparent;
-  min-height: 100svh;
+  min-height: auto;
   --about-card-accent: #c13733;
   --about-card-bg: #151515;
   --about-card-fg: #fff;
