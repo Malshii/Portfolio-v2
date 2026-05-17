@@ -13,6 +13,34 @@
   --glass-border: rgba(255, 255, 255, 0.14);
   --shadow-deep: 0 24px 60px rgba(0, 0, 0, 0.5);
 
+  --page-theme-bg:
+    radial-gradient(
+      circle at 16% 24%,
+      rgba(193, 55, 51, 0.08),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 78% 30%,
+      rgba(193, 55, 51, 0.17),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 62% 66%,
+      rgba(193, 55, 51, 0.14),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 24% 82%,
+      rgba(193, 55, 51, 0.12),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 90% 88%,
+      rgba(193, 55, 51, 0.16),
+      transparent 22%
+    ),
+    linear-gradient(180deg, #020202 0%, #000000 100%);
+
   /* --font-open-sans: "Open Sans", Arial, Helvetica, sans-serif;
   --font-roboto: "Roboto", Arial, Helvetica, sans-serif;
   --font-montserrat: "Montserrat", Arial, Helvetica, sans-serif;
