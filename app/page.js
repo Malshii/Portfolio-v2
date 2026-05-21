@@ -10,13 +10,7 @@ import { projects, skills, timeline } from "./data/portfolioData";
 export default function Home() {
   return (
     <>
-      <section className="hero-stage" id="home">
-        <div className="hero-shell">
-          <TopNav />
-          <HeroSection />
-        </div>
-      </section>
-
+      <HeroSection />
       <AboutSection />
       <SkillsSection skills={skills} />
       <ProjectsSection projects={projects} showAll={false}/>

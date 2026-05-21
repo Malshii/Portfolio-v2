@@ -1,4 +1,14 @@
 /* Navigation and header styles */
+.navbar{
+  position: relative;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .top-nav {
   position: absolute;
