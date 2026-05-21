@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import PrimaryButton from "./PrimaryButton";
 
 export default function HeroSection() {
   return (
@@ -17,12 +19,7 @@ export default function HeroSection() {
         </p>
 
         <div className="hero-actions">
-          <a
-            href="#contact"
-            className="btn btn-primary hero-hireme-btn"
-          >
-            Hire Me
-          </a>
+          <PrimaryButton href="#contact">Hire Me</PrimaryButton>
           <a
             href="#projects"
             className="btn btn-secondary hero-latestwork-btn"

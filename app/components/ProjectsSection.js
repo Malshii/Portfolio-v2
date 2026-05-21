@@ -1,4 +1,5 @@
 import React from "react";
+import PrimaryButton from "./PrimaryButton";
 
 const techIconMap = {
   reactjs: "https://cdn-icons-png.flaticon.com/512/875/875209.png",
@@ -219,11 +220,46 @@ const projectSections = [
   },
 ];
 
-export default function ProjectsSection() {
+export default function ProjectsSection({ showAll = false }) {
+  // Define the 3 featured projects for the landing page
+  const featuredTitles = [
+    "Breast Cancer Classification with Localization and Subtype Identification (Final Year Project) (Group)",
+    "Tender Automation System | 2026",
+    "GDC Properties Platform | 2026",
+    "Projex System | 2025",
+  ];
+
+  // Helper to flatten all projects
+  const getAllProjects = () =>
+    projectSections.flatMap((section) =>
+      section.projects.map((project) => ({ ...project, section }))
+    );
+
+  let sectionsToShow;
+  if (showAll) {
+    // Show all sections and all projects
+    sectionsToShow = projectSections;
+  } else {
+    // Only show the 3 featured projects as cards (no section headings)
+    const allProjects = getAllProjects();
+    const featuredProjects = allProjects.filter((p) =>
+      featuredTitles.includes(p.title)
+    );
+    sectionsToShow = [
+      {
+        heading: null,
+        subHeading: null,
+        projects: featuredProjects,
+      },
+    ];
+  }
+
   return (
     <section className="projects section-reveal py-20 px-4 md:px-12 lg:px-24" id="projects">
-      <h1 className="text-3xl md:text-4xl font-bold text-left mb-10 text-white" style={{color: 'var(--electric-cyan)'}}>My Projects</h1>
-      {projectSections.map((section, idx) => (
+      <h1 className="text-3xl md:text-4xl font-bold text-left mb-10 text-white" style={{color: 'var(--electric-cyan)'}}>
+        {showAll ? "All Projects" : "My Projects"}
+      </h1>
+      {sectionsToShow.map((section, idx) => (
         <div key={`${section.heading || "section"}-${section.subHeading || "main"}-${idx}`} className="mb-14">
           {section.heading && (
             <h2 className="text-xl md:text-2xl font-semibold border-b border-white/20 pb-1 mb-2 text-white">{section.heading}</h2>
@@ -289,6 +325,11 @@ export default function ProjectsSection() {
           </div>
         </div>
       ))}
+      {!showAll && (
+        <div className="flex justify-center mt-10">
+          <PrimaryButton href="/projects">View All Projects</PrimaryButton>
+        </div>
+      )}
     </section>
   );
 }

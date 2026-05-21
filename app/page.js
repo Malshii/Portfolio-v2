@@ -19,7 +19,7 @@ export default function Home() {
 
       <AboutSection />
       <SkillsSection skills={skills} />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection projects={projects} showAll={false}/>
       {/* <ExperienceSection timeline={timeline} />
       <ContactSection /> */}
 
