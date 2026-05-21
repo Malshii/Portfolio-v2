@@ -1,4 +1,17 @@
 /* Projects section and project cards */
+.projects-section {
+  color: #fff;
+  padding: 4rem clamp(1rem, 4vw, 4rem);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: transparent;
+  min-height: auto;
+}
+
+.projects-container{
+  padding: 0 clamp(1rem, 4vw, 4rem);
+}
 
 .project-grid {
   display: grid;

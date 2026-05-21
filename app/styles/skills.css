@@ -53,24 +53,24 @@
   border: none;
 }
 
-.skills-icon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2.5rem 2.5rem;
-  justify-items: center;
-  align-items: start;
-  margin-top: 2.2rem;
-  width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 1200px) {
+  .skills-icon-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .skills-icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
 }
 
 .skills-category-block {
   margin-bottom: 2.8rem;
   margin-left: 0;
-  max-width: 900px;
+  max-width: 1200px;
 }
+
 .skills-category-title {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 1.18rem;
@@ -97,7 +97,7 @@
 /* Icon grid for skills section */
 .skills-icon-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
   gap: 2.2rem 2.2rem;
   justify-items: center;
   align-items: start;

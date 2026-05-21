@@ -255,7 +255,8 @@ export default function ProjectsSection({ showAll = false }) {
   }
 
   return (
-    <section className="projects section-reveal py-20 px-4 md:px-12 lg:px-24" id="projects">
+    <section className="projects-section section-reveal py-20 px-4 md:px-12 lg:px-24" id="projects">
+      <div className="projects-container">
       <h1 className="text-3xl md:text-4xl font-bold text-left mb-10 text-white" style={{color: 'var(--electric-cyan)'}}>
         {showAll ? "All Projects" : "My Projects"}
       </h1>
@@ -330,6 +331,7 @@ export default function ProjectsSection({ showAll = false }) {
           <PrimaryButton href="/projects">View All Projects</PrimaryButton>
         </div>
       )}
+      </div>
     </section>
   );
 }
