@@ -159,38 +159,40 @@ export default function SkillsSection() {
   }
 
   return (
-    <section className="skills section-reveal" id="skills">
-      <h2 className="about-title">My own technical and other skills.</h2>
-      <p className="section-subtitle">
-        As a Software Engineer specializing in ReactJS, Next.js, and full-stack
-        development, I blend technical expertise with strong problem-solving
-        skills to deliver high-quality, user-focused solutions. My experience
-        with modern frameworks and AI/ML technologies enables me to adapt
-        quickly to evolving tech challenges.
-      </p>
-      <div className="skills-tabs-row">
-        {categoryLabels.map((label) => (
-          <button
-            key={label}
-            className={`skills-tab-btn${selectedCategory === label ? " active" : ""}`}
-            onClick={() => setSelectedCategory(label)}
-            type="button"
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      <div className="skills-icon-grid">
-        {displayedSkills.map((skill) => (
-          <div className="skill-icon-card" key={skill.title}>
-            <img
-              src={skill.icon}
-              alt={skill.title}
-              className="skill-icon-img"
-            />
-            <div className="skill-icon-label">{skill.title}</div>
-          </div>
-        ))}
+    <section className="skills-section section-reveal" id="skills">
+      <div className="skills-container">
+        <h2 className="about-title">My own technical and other skills.</h2>
+        <p className="section-subtitle">
+          As a Software Engineer specializing in ReactJS, Next.js, and
+          full-stack development, I blend technical expertise with strong
+          problem-solving skills to deliver high-quality, user-focused
+          solutions. My experience with modern frameworks and AI/ML technologies
+          enables me to adapt quickly to evolving tech challenges.
+        </p>
+        <div className="skills-tabs-row">
+          {categoryLabels.map((label) => (
+            <button
+              key={label}
+              className={`skills-tab-btn${selectedCategory === label ? " active" : ""}`}
+              onClick={() => setSelectedCategory(label)}
+              type="button"
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <div className="skills-icon-grid">
+          {displayedSkills.map((skill) => (
+            <div className="skill-icon-card" key={skill.title}>
+              <img
+                src={skill.icon}
+                alt={skill.title}
+                className="skill-icon-img"
+              />
+              <div className="skill-icon-label">{skill.title}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
