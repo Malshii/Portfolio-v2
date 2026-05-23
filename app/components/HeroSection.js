@@ -12,12 +12,12 @@ export default function HeroSection() {
               Malshi <span className="hero-title-accent">Kulasinghe</span>
             </h1>
             <p className="hero-summary hero-summary-styled">
-              Software Engineer with industry experience in building scalable
-              full-stack applications using React, Redux, and Node.js. Strong in
-              frontend development, API integration, and database-driven systems,
-              with hands on experience in Microsoft Azure. Proven ability to
-              deliver efficient, user-focused solutions in Agile team
-              environments.
+              Software Engineer specializing in scalable full-stack web
+              applications using React, Next.js, and Node.js. Experienced in
+              frontend development, API integrations, and database-driven
+              systems with hands-on industry experience in Agile environments.
+              Passionate about building efficient, user-focused digital
+              solutions.
             </p>
 
             <div className="hero-actions">
@@ -52,7 +52,10 @@ export default function HeroSection() {
                 priority
               />
               {/* Social Media Icons as floating badges */}
-              <aside className="hero-highlights" aria-label="Social media links">
+              <aside
+                className="hero-highlights"
+                aria-label="Social media links"
+              >
                 {/* Facebook */}
                 <a
                   className="hero-social social-1"

@@ -93,31 +93,20 @@ export default function AboutSection() {
         <div className="about-content">
           <h2 className="about-title">About me</h2>
           <p className="about-description">
-            A highly creative and hardworking individual, I love trying out the
-            newest technologies and creating user-focused solutions. As a
-            Software Engineer at GDC Consultants Ltd. with a Bachelor's degree
-            in Information Technology & Management from the University of
-            Moratuwa, I am eager for new challenges to grow as a tech
-            professional.
+            Focused on building scalable and user-friendly systems that solve real business problems. Specialized in full-stack engineering with a passion for delivering robust, maintainable solutions. I thrive on tackling complex challenges and turning ideas into impactful digital products. As a Software Engineer with a Bachelor's degree in Information Technology & Management from the University of Moratuwa, I am eager for new opportunities to innovate and drive results.
           </p>
           <div className="about-stats">
             <div className="about-stat">
               <span className="about-stat-number">
-                120 <span className="about-stat-accent">+</span>
+                10 <span className="about-stat-accent">+</span>
               </span>
               <span className="about-stat-label">Completed Projects</span>
             </div>
             <div className="about-stat">
               <span className="about-stat-number">
-                95 <span className="about-stat-accent">%</span>
+                2 <span className="about-stat-accent">+</span>
               </span>
-              <span className="about-stat-label">Client satisfaction</span>
-            </div>
-            <div className="about-stat">
-              <span className="about-stat-number">
-                10 <span className="about-stat-accent">+</span>
-              </span>
-              <span className="about-stat-label">Years of experience</span>
+              <span className="about-stat-label">Years Industry Experience</span>
             </div>
           </div>
         </div>

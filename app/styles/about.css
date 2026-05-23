@@ -17,17 +17,20 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 0;
   width: 100%;
-  padding: 0 clamp(1rem, 4vw, 4rem);
+  padding-left: clamp(1rem, 4vw, 4rem);
+  padding-right: clamp(1rem, 4vw, 4rem);
   box-sizing: border-box;
 }
 .about-services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.2rem;
+  gap: 1.5rem;
   padding: 2.2rem 0;
   justify-content: center;
+  width: 50%;
+  min-width: 0;
 }
 
 .about-service {
@@ -91,6 +94,8 @@
   stroke: var(--about-card-accent) !important;
   color: var(--about-card-accent) !important;
   fill: none;
+  stroke-width: 1;
+  fill: none !important;
 }
 .about-service-title {
   font-size: 1.18rem;
@@ -107,10 +112,6 @@
   margin-top: 0.2rem;
 }
 
-.about-content {
-  flex: 1;
-  padding-left: 2rem;
-}
 .about-title {
   font-size: 3rem;
   font-weight: 600;
@@ -118,19 +119,34 @@
   margin-bottom: 1.5rem;
   color: #fff;
 }
-.about-description {
-  font-size: 1.2rem;
-  font-family:
-    "Open Sans", "Open Sans Fallback", Roboto, "Roboto Fallback", sans-serif;
-  color: #e0e0e0;
-  margin-bottom: 2.5rem;
-  max-width: 520px;
+
+.about-content {
+  width: 50%;
+  min-width: 0;
+  padding-left: 2rem;
+  padding-right: 0;
 }
-.about-stats {
+
+.about-service {
   display: flex;
-  gap: 3.5rem;
-  margin-top: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 0.8rem 1.5rem 0.8rem;
+  border-radius: 1.1rem;
+  background: var(--about-card-bg);
+  border: 2px solid transparent;
+  box-shadow:
+    0 4px 18px 0 rgba(0, 0, 0, 0.1),
+    0 1.5px 6px 0 rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.22s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.22s;
+  min-width: 160px;
+  min-height: 160px;
 }
+
 .about-stat {
   display: flex;
   flex-direction: column;
@@ -157,10 +173,19 @@
   display: block;
   font-size: 1rem;
   color: #b0b0b0;
-  margin-top: 0.32rem;
+  margin-top: 0.18rem;
   font-family: "Open Sans", "Open Sans Fallback", Roboto, "Roboto Fallback", sans-serif;
   text-align: center;
   line-height: 1.4;
+}
+.about-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: nowrap;
 }
 @media (max-width: 900px) {
   .about-container {

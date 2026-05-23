@@ -1,3 +1,11 @@
+/* Limit the width of the hero summary paragraph for better readability */
+.hero-summary {
+  max-width: 550px;
+  margin: 0.45rem auto 0;
+  color: #ffffff;
+  font-weight: 500;
+}
+
 /* --- HERO SECTION CUSTOM STYLES (HIGH SPECIFICITY) --- */
 .hero-copy h1.hero-title {
   font-family: "Montserrat", "Montserrat Fallback", sans-serif;
@@ -96,7 +104,7 @@
   position: relative;
   width: min(1280px, 100%);
   margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 1.5rem);
+  /* padding: 0 clamp(1rem, 3vw, 1.5rem); */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -138,11 +146,11 @@
   position: relative;
 }
 
-.hero-copy {
+/* .hero-copy {
   border-left: 2px solid rgba(255, 255, 255, 0.72);
   padding-left: 2rem;
   max-width: 600px;
-}
+} */
 
 .hero-kicker {
   color: var(--aurora-green);
@@ -163,12 +171,6 @@
 
 .hero-copy h1 span {
   color: var(--electric-cyan);
-}
-
-.hero-summary {
-  margin: 0.45rem 0 0;
-  color: #ffffff;
-  font-weight: 500;
 }
 
 .hero-actions {
