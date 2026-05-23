@@ -1,4 +1,17 @@
 /* Experience and timeline styles */
+.experince-section{
+  color: #fff;
+  padding: 4rem clamp(1rem, 4vw, 4rem);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: transparent;
+  min-height: auto;
+}
+
+.experience-container{
+  padding: 0 clamp(1rem, 4vw, 4rem);
+}
 
 .timeline-list {
   position: relative;
@@ -55,4 +68,127 @@
 .timeline-card p {
   margin: 0.5rem 0 0;
   color: rgba(255, 255, 255, 0.72);
+}
+
+/* Modern Experience & Education Section Styles */
+.experience-section {
+  width: 100%;
+  padding: 4rem clamp(1rem, 4vw, 4rem);
+  background: transparent;
+}
+.experience-columns {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.experience-col {
+  flex: 1 1 0;
+  min-width: 320px;
+  max-width: 520px;
+}
+.experience-subtitle {
+  color: #6ee7b7;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.exp-card {
+  background: #181c1f;
+  border-radius: 1.3rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+  padding: 2rem 2rem 1.5rem 2rem;
+  position: relative;
+  border: 1.5px solid #23272b;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.exp-card.expanded {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  border-color: #6ee7b7;
+}
+.exp-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  cursor: pointer;
+}
+.exp-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #23272b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6ee7b7;
+  font-size: 1.7rem;
+}
+.exp-card-main {
+  flex: 1;
+}
+.exp-card-dates {
+  font-size: 0.98rem;
+  color: #6ee7b7;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+.exp-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.1rem;
+}
+.exp-card-place {
+  font-size: 1.02rem;
+  color: #b0b0b0;
+  margin-bottom: 0.2rem;
+}
+.exp-card-badge {
+  display: inline-block;
+  background: #1e293b;
+  color: #6ee7b7;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  padding: 0.18em 0.9em;
+  margin-bottom: 0.5rem;
+}
+.exp-card-toggle {
+  background: #23272b;
+  color: #6ee7b7;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.2em 1.1em;
+  margin-left: 1.2rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.exp-card-toggle:hover {
+  background: #6ee7b7;
+  color: #181c1f;
+}
+.exp-card-details {
+  margin-top: 1.1rem;
+  color: #e0e0e0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .experience-columns {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .experience-col {
+    max-width: 100%;
+  }
 }

@@ -1,20 +1,29 @@
-export default function ExperienceSection({ timeline }) {
+import ExpandableCard from "./ExpandableCard";
+
+export default function ExperienceSection({ education = [], work = [] }) {
   return (
-    <section className="timeline section-reveal" id="experience">
-      <h2>Experience Timeline</h2>
-      <p className="section-subtitle">
-        Progress across engineering, cloud, and product delivery.
-      </p>
-      <div className="timeline-list">
-        {timeline.map((item) => (
-          <article key={item.title} className="glass-card timeline-card">
-            <p className="time">{item.year}</p>
-            <h3>{item.title}</h3>
-            <h4>{item.place}</h4>
-            <p>{item.details}</p>
-          </article>
-        ))}
+    <section className="experince-section section-reveal" id="experience">
+      <div className="experience-container">
+      <h2>Experience & Education</h2>
+      <div className="experience-columns">
+        <div className="experience-col">
+          <h3 className="experience-subtitle">Education</h3>
+          <div className="timeline-list">
+            {education.map((item) => (
+              <ExpandableCard key={item.title + item.year} {...item} type="education" />
+            ))}
+          </div>
+        </div>
+        <div className="experience-col">
+          <h3 className="experience-subtitle">Work Experience</h3>
+          <div className="timeline-list">
+            {work.map((item) => (
+              <ExpandableCard key={item.title + item.year} {...item} type="work" />
+            ))}
+          </div>
+        </div>
+      </div>
       </div>
     </section>
   );
-}
+} 
