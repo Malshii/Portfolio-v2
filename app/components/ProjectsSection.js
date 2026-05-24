@@ -313,14 +313,14 @@ export default function ProjectsSection({ showAll = false }) {
                     )}
                     {project.liveUrl && (
                       <div className="mb-2 text-sm">
-                        <strong className="text-[var(--electric-cyan)]">
+                        <strong className="text-[var(--slate-blue)]">
                           Live:
                         </strong>{" "}
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[var(--electric-cyan)] underline hover:text-white"
+                          className="text-[var(--slate-blue)] underline hover:text-white"
                         >
                           {project.liveLabel || project.liveUrl}
                         </a>
