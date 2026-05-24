@@ -1,6 +1,6 @@
 /* Projects section and project cards */
 .projects-section {
-  color: #fff;
+  color: var(--soft-white);
   padding: 4rem clamp(1rem, 4vw, 4rem);
   width: 100%;
   margin: 0 auto;
@@ -28,7 +28,7 @@
 }
 
 .project-grid::-webkit-scrollbar-thumb {
-  background: rgba(193, 55, 51, 0.5);
+  background: rgba(var(--electric-cyan-rgb), 0.5);
   border-radius: 999px;
 }
 
@@ -44,13 +44,13 @@
   padding: 0.8rem;
   border: 1px solid rgba(230, 241, 255, 0.14);
   background:
-    radial-gradient(circle at 24% 24%, rgba(193, 55, 51, 0.3), transparent 55%),
+    radial-gradient(circle at 24% 24%, rgba(var(--electric-cyan-rgb), 0.3), transparent 55%),
     radial-gradient(
       circle at 85% 76%,
       rgba(160, 160, 160, 0.25),
       transparent 55%
     ),
-    linear-gradient(145deg, #000000, rgba(160, 160, 160, 0.18));
+    linear-gradient(145deg, var(--space-black), rgba(160, 160, 160, 0.18));
 }
 
 .project-card .thumb span {
@@ -60,7 +60,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.28rem 0.48rem;
-  color: #ffffff;
+  color: var(--soft-white);
 }
 
 .project-card h3 {
