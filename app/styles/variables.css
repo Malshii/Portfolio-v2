@@ -5,6 +5,7 @@
   --cosmic-navy: #000000;
   --electric-cyan: #c13733;
   --electric-cyan-rgb: 193, 55, 51;
+  --electric-cyan-transparent: 163, 91, 91, 0.17;
   --neon-violet: #a0a0a0;
   --aurora-green: #c13733;
   --solar-orange: #c13733;
@@ -18,7 +19,7 @@
   --page-theme-bg:
     radial-gradient(
       circle at 16% 24%,
-      rgba(193, 55, 51, 0.08),
+      rgba(var(--electric-cyan-rgb), 0.08),
       transparent 24%
     ),
     radial-gradient(
