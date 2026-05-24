@@ -1,5 +1,6 @@
 /* Theme variables and color definitions */
 :root {
+    --card-bg: #151515;
   --space-black: #000000;
   --cosmic-navy: #000000;
   --electric-cyan: #c13733;

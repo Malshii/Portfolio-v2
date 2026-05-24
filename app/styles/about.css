@@ -1,16 +1,16 @@
 /* About Section Styles - Modern Two Column Layout */
 .about-section {
-  color: #fff;
+  color: var(--soft-white);
   padding: 4rem clamp(1rem, 4vw, 4rem);
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   background: transparent;
   min-height: auto;
-  --about-card-accent: #c13733;
-  --about-card-bg: #151515;
-  --about-card-fg: #fff;
-  --about-card-muted: #b0b0b0;
+  --about-card-accent: var(--electric-cyan);
+  --about-card-bg: var(--card-bg);
+  --about-card-fg: var(--soft-white);
+  --about-card-muted: var(--text-muted);
 }
 .about-container {
   display: flex;
@@ -58,7 +58,7 @@
   border-color: var(--about-card-accent);
   box-shadow:
     0 0 0 0 var(--about-card-accent),
-    0 8px 32px rgba(193,55,51,0.10),
+    0 8px 32px rgba(var(--electric-cyan-rgb),0.10),
     0 2px 8px rgba(0,0,0,0.10),
     8px 12px 0 -4px var(--about-card-accent);
 }
@@ -117,7 +117,7 @@
   font-weight: 600;
   font-family: "Montserrat", "Montserrat Fallback", sans-serif;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--soft-white);
 }
 
 .about-content {
@@ -159,12 +159,12 @@
   justify-content: center;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--soft-white);
   font-family: "Montserrat", "Montserrat Fallback", sans-serif;
   line-height: 1.1;
 }
 .about-stat-accent {
-  color: #c13733;
+  color: var(--electric-cyan);
   font-size: 2.1rem;
   font-weight: 800;
   margin-left: 0.18em;
@@ -172,7 +172,7 @@
 .about-stat-label {
   display: block;
   font-size: 1rem;
-  color: #b0b0b0;
+  color: var(--text-muted);
   margin-top: 0.18rem;
   font-family: "Open Sans", "Open Sans Fallback", Roboto, "Roboto Fallback", sans-serif;
   text-align: center;
