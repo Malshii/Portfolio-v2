@@ -22,10 +22,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
+      <AboutSection />      
+      <ExperienceSection education={education} work={work} />
       <SkillsSection skills={skills} />
       <ProjectsSection projects={projects} showAll={false}/>
-      <ExperienceSection education={education} work={work} />
       {/* <ContactSection /> */}
 
       <footer className="site-footer">

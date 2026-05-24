@@ -1,6 +1,6 @@
 /* Experience and timeline styles */
 .experince-section{
-  color: #fff;
+  color: var(--soft-white);
   padding: 4rem clamp(1rem, 4vw, 4rem);
   width: 100%;
   margin: 0 auto;
@@ -19,16 +19,6 @@
   gap: 1rem;
 }
 
-.timeline-list::before {
-  content: "";
-  position: absolute;
-  left: 18px;
-  top: 16px;
-  bottom: 16px;
-  width: 2px;
-  background: linear-gradient(var(--soft-white), var(--royal-violet), var(--slate-blue));
-  box-shadow: 0 0 14px rgba(193, 55, 51, 0.35);
-}
 
 .timeline-card {
   position: relative;
@@ -43,9 +33,9 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--royal-violet);
-  background: var(--royal-violet);
-  box-shadow: 0 0 12px rgba(193, 55, 51, 0.38);
+  border: none;
+  background: var(--aurora-green);
+  box-shadow: 0 0 12px rgba(var(--electric-cyan-rgb), 0.38);
 }
 
 .timeline-card .time {
@@ -88,7 +78,7 @@
   max-width: 520px;
 }
 .experience-subtitle {
-  color: #6ee7b7;
+  color: var(--aurora-green);
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.12em;
