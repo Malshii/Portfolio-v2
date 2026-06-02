@@ -1,7 +1,4 @@
-import React from "react";
-import PrimaryButton from "./PrimaryButton";
-
-const techIconMap = {
+export const techIconMap = {
   reactjs: "https://cdn-icons-png.flaticon.com/512/875/875209.png",
   redux:
     "https://cdn.iconscout.com/icon/free/png-256/free-redux-logo-icon-svg-download-png-3030243.png",
@@ -34,51 +31,7 @@ const techIconMap = {
   firebase: "https://img.icons8.com/color/48/000000/firebase.png",
 };
 
-const normalizeTech = (tech) =>
-  tech
-    .toLowerCase()
-    .replace(/\(.*?\)/g, "")
-    .replace(/\./g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-
-const getTechList = (project) => {
-  const techLine = project.details.find((line) =>
-    line.toLowerCase().startsWith("technologies:"),
-  );
-
-  if (!techLine) return [];
-
-  return techLine
-    .replace(/^Technologies:\s*/i, "")
-    .split(",")
-    .map((item) => item.trim())
-    .filter(Boolean);
-};
-
-const getTechIcon = (tech) => techIconMap[normalizeTech(tech)] || null;
-
-const getProjectIcons = (project) => {
-  if (project.stack?.length) return project.stack;
-  return getTechList(project)
-    .map((tech) => getTechIcon(tech))
-    .filter(Boolean);
-};
-
-const splitProjectDetails = (project) => {
-  const techLine = project.details.find((line) =>
-    line.toLowerCase().startsWith("technologies:"),
-  );
-
-  return {
-    techLine,
-    points: project.details.filter(
-      (line) => !line.toLowerCase().startsWith("technologies:"),
-    ),
-  };
-};
-
-const projectSections = [
+export const projectSections = [
   {
     heading: "Research Experience",
     projects: [
@@ -209,7 +162,7 @@ const projectSections = [
         title: "Grocery Mobile Application | 2023",
         details: [
           "User-friendly app to streamline grocery shopping.",
-          'Developed the "view grocery store(s)" screen for a seamless user experience in accessing store options.',
+          "Developed the \"view grocery store(s)\" screen for a seamless user experience in accessing store options.",
           "Technologies: Flutter",
         ],
       },
@@ -242,171 +195,3 @@ const projectSections = [
     ],
   },
 ];
-
-export default function ProjectsSection({ showAll = false }) {
-  const featuredTitles = [
-    "Breast Cancer Classification with Localization and Subtype Identification (Final Year Project) (Group)",
-    "Tender Automation System | 2026",
-    "GDC Properties Platform | 2026",
-    "Projex System | 2025",
-  ];
-
-  const getAllProjects = () =>
-    projectSections.flatMap((section) =>
-      section.projects.map((project) => ({ ...project, section })),
-    );
-
-  let sectionsToShow;
-  if (showAll) {
-    sectionsToShow = projectSections;
-  } else {
-    const allProjects = getAllProjects();
-    const featuredProjects = allProjects.filter((project) =>
-      featuredTitles.includes(project.title),
-    );
-    sectionsToShow = [
-      {
-        heading: null,
-        projects: featuredProjects,
-      },
-    ];
-  }
-
-  const totalProjects = getAllProjects().length;
-  const totalSections = projectSections.length;
-
-  return (
-    <section className="projects-section section-reveal" id="projects">
-      <div className="projects-container">
-        <div className="projects-header">
-          <div className="projects-copy">
-            <p className="projects-eyebrow">Showcase</p>
-            <h2 className="projects-title">
-              {showAll ? "Project Archive" : "Featured Projects"}
-            </h2>
-            <p className="projects-subtitle">
-              {showAll
-                ? "A complete project collection across research, product engineering, and mobile development."
-                : "A curated set of work that reflects engineering depth, product thinking, and delivery quality."}
-            </p>
-          </div>
-
-          {/* <div className="projects-summary-card" aria-label="Projects summary">
-            <div className="projects-summary-row">
-              <span className="projects-summary-label">Projects</span>
-              <span className="projects-summary-value">{totalProjects}</span>
-            </div>
-            <div className="projects-summary-row">
-              <span className="projects-summary-label">Groups</span>
-              <span className="projects-summary-value">{totalSections}</span>
-            </div>
-            <div className="projects-summary-row">
-              <span className="projects-summary-label">Visible</span>
-              <span className="projects-summary-value">
-                {sectionsToShow.reduce(
-                  (count, section) => count + section.projects.length,
-                  0,
-                )}
-              </span>
-            </div>
-          </div> */}
-        </div>
-
-        {sectionsToShow.map((section, index) => (
-          <div
-            key={`${section.heading || "group"}-${section.subHeading || "main"}-${index}`}
-            className="project-group"
-          >
-            {section.heading && <h3 className="project-group-title">{section.heading}</h3>}
-            {section.subHeading && (
-              <p className="project-group-subtitle">{section.subHeading}</p>
-            )}
-
-            <div className={`projects-grid${showAll ? " projects-grid-all" : ""}`}>
-              {section.projects.map((project, projectIndex) => {
-                const { techLine, points } = splitProjectDetails(project);
-                const projectIcons = getProjectIcons(project);
-                const surfaceLabel =
-                  section.subHeading || section.heading || "Featured";
-
-                return (
-                  <article className="project-card" key={project.title}>
-                    <div className="project-accent-line" aria-hidden="true" />
-
-                    <div className="project-card-head">
-                      <div className="project-card-top-meta">
-                        <span className="project-chip">{surfaceLabel}</span>
-                        <span className="project-index">
-                          {String(projectIndex + 1).padStart(2, "0")}
-                        </span>
-                      </div>
-
-                      <h4 className="project-card-title">{project.title}</h4>
-                      {project.org && <p className="project-card-org">{project.org}</p>}
-
-                      <div className="project-meta-inline">
-                        <span>{points.length} highlights</span>
-                        <span>{projectIcons.length || getTechList(project).length} tools</span>
-                      </div>
-                    </div>
-
-                    {projectIcons.length > 0 && (
-                      <div className="project-tech-icons">
-                        {projectIcons.map((icon) => (
-                          <img
-                            key={`${project.title}-${icon}`}
-                            src={icon}
-                            alt="Technology icon"
-                            className="project-tech-icon"
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        ))}
-                      </div>
-                    )}
-
-                    {project.liveUrl && (
-                      <p className="project-live-link">
-                        Live:
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          {project.liveLabel || project.liveUrl}
-                        </a>
-                      </p>
-                    )}
-
-                    <ul className="project-points">
-                      {points.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-
-                    {project.nested && (
-                      <div className="project-nested">
-                        <p className="project-nested-title">{project.nested.label}</p>
-                        <ul>
-                          {project.nested.points.map((subItem) => (
-                            <li key={subItem}>{subItem}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    <div className="project-footer-row">
-                      {techLine && <p className="project-tech-line">{techLine}</p>}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-
-        {!showAll && (
-          <div className="projects-cta-wrap">
-            <PrimaryButton href="/projects">View All Projects</PrimaryButton>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-}

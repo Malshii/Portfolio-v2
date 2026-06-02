@@ -1,4 +1,4 @@
-import ExpandableCard from "./ExpandableCard";
+import ExpandableCard from "../ui/ExpandableCard";
 
 export default function ExperienceSection({ education = [], work = [] }) {
   return (

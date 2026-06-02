@@ -1,15 +1,12 @@
-"use client";
-import React, { useState } from "react";
-
-const skills = [   
+export const skills = [
   {
     title: "ReactJS",
     icon: "https://cdn-icons-png.flaticon.com/512/875/875209.png",
-  }, 
+  },
   {
     title: "Next.js",
     icon: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
-  },    
+  },
   {
     title: "Tailwind CSS",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png",
@@ -21,15 +18,15 @@ const skills = [
   {
     title: "Material UI",
     icon: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
-  },  
+  },
   {
     title: "WordPress",
     icon: "https://cdn-icons-png.flaticon.com/512/174/174881.png",
-  },  
+  },
   {
     title: "Git",
     icon: "https://cdn-icons-png.flaticon.com/512/6878/6878120.png",
-  },   
+  },
   {
     title: "Nodejs",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
@@ -37,7 +34,7 @@ const skills = [
   {
     title: "Python",
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
-  },   
+  },
   {
     title: "Flask",
     icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/flask-qvsfwhwywucb6zv0d7ce.png/flask-1byb2jlw6nwim4nx2248xg.png?_a=DATAiZAAZAA0",
@@ -45,7 +42,7 @@ const skills = [
   {
     title: "JavaScript",
     icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-  },   
+  },
   {
     title: "MySQL",
     icon: "https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png",
@@ -53,11 +50,11 @@ const skills = [
   {
     title: "MongoDB",
     icon: "https://icon-icons.com/download-file?file=https%3A%2F%2Fimages.icon-icons.com%2F2415%2FPNG%2F512%2Fmongodb_original_wordmark_logo_icon_146425.png&id=146425&pack_or_individual=pack",
-  }, 
+  },
   {
     title: "Flutter",
     icon: "https://images.icon-icons.com/2107/PNG/512/file_type_flutter_icon_130599.png",
-  },    
+  },
   {
     title: "Figma",
     icon: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
@@ -69,11 +66,11 @@ const skills = [
   {
     title: "Java",
     icon: "https://cdn-icons-png.flaticon.com/512/226/226777.png",
-  }, 
+  },
   {
     title: "C",
     icon: "https://cdn-icons-png.flaticon.com/512/9313/9313197.png",
-  },  
+  },
   {
     title: "HTML",
     icon: "https://cdn-icons-png.flaticon.com/512/1051/1051277.png",
@@ -108,7 +105,7 @@ const skills = [
   },
 ];
 
-const skillsByCategory = {
+export const skillsByCategory = {
   "Programming Languages": skills.filter((skill) =>
     ["Java", "Python", "C", "JavaScript", "PHP"].includes(skill.title),
   ),
@@ -141,61 +138,4 @@ const skillsByCategory = {
   ),
 };
 
-const categoryLabels = ["All", ...Object.keys(skillsByCategory)];
-
-export default function SkillsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  let displayedSkills = skills;
-  if (selectedCategory !== "All") {
-    displayedSkills = skillsByCategory[selectedCategory] || [];
-  }
-
-  const totalSkills = skills.length;
-  const totalCategories = Object.keys(skillsByCategory).length;
-
-  return (
-    <section className="skills-section section-reveal" id="skills">
-      <div className="skills-container">
-        <div className="skills-header">
-          <div className="skills-copy">
-            <p className="skills-eyebrow">Toolkit</p>
-            <h2 className="skills-title">Technical skills with product focus</h2>
-            <p className="section-subtitle skills-subtitle">
-              A curated set of technologies I use to design, build, and ship
-              reliable digital products. The layout is grouped for quick
-              scanning so recruiters and clients can understand strengths at a
-              glance.
-            </p>
-          </div>
-        </div>
-
-        <div className="skills-tabs-row">
-          {categoryLabels.map((label) => (
-            <button
-              key={label}
-              className={`skills-tab-btn${selectedCategory === label ? " active" : ""}`}
-              onClick={() => setSelectedCategory(label)}
-              type="button"
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <div className="skills-icon-grid">
-          {displayedSkills.map((skill) => (
-            <div className="skill-icon-card" key={skill.title}>
-              <img
-                src={skill.icon}
-                alt={skill.title}
-                className="skill-icon-img"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="skill-icon-label">{skill.title}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export const categoryLabels = ["All", ...Object.keys(skillsByCategory)];

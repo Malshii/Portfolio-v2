@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectsSection from "../components/ProjectsSection";
+import ProjectsSection from "../components/sections/ProjectsSection";
 
 export default function AllProjectsPage() {
   return (

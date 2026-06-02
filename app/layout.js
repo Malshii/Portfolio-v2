@@ -1,4 +1,4 @@
-import TopNav from "./components/TopNav";
+import TopNav from "./components/navigation/TopNav";
 import "./globals.css";
 
 export const metadata = {

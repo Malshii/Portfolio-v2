@@ -6,7 +6,7 @@ import {
   LuPhone,
   LuSend,
 } from "react-icons/lu";
-import PrimaryButton from "./PrimaryButton";
+import PrimaryButton from "../ui/PrimaryButton";
 
 export default function ContactSection() {
   return (
@@ -95,7 +95,7 @@ export default function ContactSection() {
               <textarea rows="5" placeholder="Tell me about your project" />
             </label>
 
-            <PrimaryButton>
+            <PrimaryButton className="contact-submit-btn">
               <LuSend aria-hidden="true" />
               Send Message
             </PrimaryButton>

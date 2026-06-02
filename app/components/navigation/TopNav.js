@@ -1,4 +1,4 @@
-import GradientText from "./GradientText";
+import GradientText from "../ui/GradientText";
 
 export default function TopNav() {
   const menuItems = [

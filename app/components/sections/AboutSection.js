@@ -1,5 +1,5 @@
 import React from "react";
-import BorderGlow from "./BorderGlow";
+import BorderGlow from "../ui/BorderGlow";
 import { LuSmartphone, LuPalette, LuCodeXml, LuLaptopMinimal } from "react-icons/lu";
 
 export default function AboutSection() {
