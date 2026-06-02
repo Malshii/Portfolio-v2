@@ -89,12 +89,12 @@
 }
 
 .about-icon svg {
-  width: 54px;
-  height: 54px;
+  width: 42px;
+  height: 42px;
   stroke: var(--about-card-accent) !important;
   color: var(--about-card-accent) !important;
   fill: none;
-  stroke-width: 1;
+  stroke-width: 1.6;
   fill: none !important;
 }
 .about-service-title {
