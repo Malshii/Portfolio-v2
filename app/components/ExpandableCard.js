@@ -1,31 +1,43 @@
 "use client";
 import React, { useState } from "react";
-import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
+import { LuBriefcaseBusiness, LuGraduationCap } from "react-icons/lu";
 
 export default function ExpandableCard({ year, title, place, details, type }) {
-  const [expanded, setExpanded] = React.useState(false);
-  // Use icon based on type
-  const icon =
-    type === "education" ? (
-      <FaGraduationCap />
-    ) : (
-      <FaBriefcase />
-    );
-  // Optionally parse year for date range
+  const [expanded, setExpanded] = useState(false);
+  const isEducation = type === "education";
+  const icon = isEducation ? <LuGraduationCap /> : <LuBriefcaseBusiness />;
+  const typeLabel = isEducation ? "Education" : "Work";
+  const detailsId = `${type}-${year}-${title}`.replace(/[^a-zA-Z0-9-_]/g, "-");
+
   return (
-    <article className={`exp-card${expanded ? " expanded" : ""}`}> 
-      <div className="exp-card-header" onClick={() => setExpanded((e) => !e)}>
-        <span className="exp-card-icon">{icon}</span>
+    <article className={`exp-card${expanded ? " expanded" : ""}`}>
+      <div className="exp-card-header">
+        <span className="exp-card-icon" aria-hidden="true">
+          {icon}
+        </span>
         <div className="exp-card-main">
-          <div className="exp-card-dates">{year}</div>
+          <div className="exp-card-meta-row">
+            <div className="exp-card-dates">{year}</div>
+            <span className="exp-card-badge">{typeLabel}</span>
+          </div>
           <div className="exp-card-title">{title}</div>
           <div className="exp-card-place">{place}</div>
         </div>
-        <button className="exp-card-toggle" aria-label={expanded ? "Collapse" : "Expand"}>
+        <button
+          type="button"
+          className="exp-card-toggle"
+          onClick={() => setExpanded((current) => !current)}
+          aria-expanded={expanded}
+          aria-controls={detailsId}
+        >
           {expanded ? "Less" : "More"}
         </button>
       </div>
-      {expanded && <div className="exp-card-details">{details}</div>}
+      {expanded && (
+        <div className="exp-card-details" id={detailsId}>
+          {details}
+        </div>
+      )}
     </article>
   );
 }
