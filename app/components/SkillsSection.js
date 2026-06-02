@@ -150,17 +150,25 @@ export default function SkillsSection() {
     displayedSkills = skillsByCategory[selectedCategory] || [];
   }
 
+  const totalSkills = skills.length;
+  const totalCategories = Object.keys(skillsByCategory).length;
+
   return (
     <section className="skills-section section-reveal" id="skills">
       <div className="skills-container">
-        <h2 className="about-title">My own technical and other skills.</h2>
-        <p className="section-subtitle">
-          As a Software Engineer specializing in ReactJS, Next.js, and
-          full-stack development, I blend technical expertise with strong
-          problem-solving skills to deliver high-quality, user-focused
-          solutions. My experience with modern frameworks and AI/ML technologies
-          enables me to adapt quickly to evolving tech challenges.
-        </p>
+        <div className="skills-header">
+          <div className="skills-copy">
+            <p className="skills-eyebrow">Toolkit</p>
+            <h2 className="skills-title">Technical skills with product focus</h2>
+            <p className="section-subtitle skills-subtitle">
+              A curated set of technologies I use to design, build, and ship
+              reliable digital products. The layout is grouped for quick
+              scanning so recruiters and clients can understand strengths at a
+              glance.
+            </p>
+          </div>
+        </div>
+
         <div className="skills-tabs-row">
           {categoryLabels.map((label) => (
             <button
@@ -180,6 +188,8 @@ export default function SkillsSection() {
                 src={skill.icon}
                 alt={skill.title}
                 className="skill-icon-img"
+                loading="lazy"
+                decoding="async"
               />
               <div className="skill-icon-label">{skill.title}</div>
             </div>

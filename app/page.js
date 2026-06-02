@@ -26,7 +26,7 @@ export default function Home() {
       <ExperienceSection education={education} work={work} />
       <SkillsSection skills={skills} />
       <ProjectsSection projects={projects} showAll={false}/>
-      {/* <ContactSection /> */}
+      <ContactSection />
 
       <footer className="site-footer">
         <p>Built with clarity, craft, and purpose.</p>

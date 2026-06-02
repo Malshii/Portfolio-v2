@@ -1,9 +1,9 @@
 /* Navigation and header styles */
 .navbar{
   position: relative;
-  width: min(1280px, 100%);
+  width: min(1180px, 100%);
   margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 1.5rem);
+  padding: 0 clamp(1rem, 4vw, 4rem);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -17,8 +17,8 @@
   right: 0;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+  padding-right: clamp(1rem, 2vw, 1.5rem);
   z-index: 100;
   width: 100%;
   margin: 0;
@@ -56,11 +56,32 @@
 .top-nav nav a {
   color: var(--text-muted);
   font-size: 0.92rem;
-  transition: color 220ms ease;
+  transition: transform 220ms ease;
 }
 
 .top-nav nav a:hover {
-  color: var(--soft-white);
+  transform: translateY(-1px);
+}
+
+.nav-link-gradient {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-gradient-text {
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+}
+
+.nav-gradient-text .textContent,
+.nav-gradient-text [class*="textContent"] {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.nav-link-gradient:hover .nav-gradient-text {
+  opacity: 1;
 }
 
 .nav-cta {
