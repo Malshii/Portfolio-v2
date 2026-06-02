@@ -75,5 +75,5 @@
 }
 
 .nav-cta:hover {
-  box-shadow: 0 0 18px rgba(193, 55, 51, 0.28);
+  box-shadow: 0 0 18px rgba(var(--electric-cyan-rgb), 0.28);
 }

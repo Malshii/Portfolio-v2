@@ -30,8 +30,8 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: rgba(193, 55, 51, 0.72);
-  box-shadow: 0 0 0 3px rgba(193, 55, 51, 0.2);
+  border-color: rgba(var(--electric-cyan-rgb), 0.72);
+  box-shadow: 0 0 0 3px rgba(var(--electric-cyan-rgb), 0.2);
 }
 
 .contact-info {

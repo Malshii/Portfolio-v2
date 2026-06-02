@@ -4,7 +4,7 @@ section h2 {
   font-family: var(--font-montserrat), sans-serif;
   font-size: clamp(1.65rem, 3.1vw, 2.5rem);
   margin: 0 0 0.85rem;
-  text-shadow: 0 0 14px rgba(193, 55, 51, 0.2);
+  text-shadow: 0 0 14px rgba(var(--electric-cyan-rgb), 0.2);
 }
 
 .section-subtitle {

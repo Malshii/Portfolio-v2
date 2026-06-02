@@ -32,8 +32,8 @@
 
 .hero-social:hover {
   transform: scale(1.08);
-  border-color: rgba(193, 55, 51, 0.7);
-  box-shadow: 0 0 20px rgba(193, 55, 51, 0.35);
+  border-color: rgba(var(--electric-cyan-rgb), 0.7);
+  box-shadow: 0 0 20px rgba(var(--electric-cyan-rgb), 0.35);
 }
 
 /* Unique positions for 6 social icons */
@@ -85,6 +85,6 @@
 
 .social-row a:hover {
   color: var(--soft-white);
-  border-color: rgba(193, 55, 51, 0.7);
-  box-shadow: 0 0 16px rgba(193, 55, 51, 0.3);
+  border-color: rgba(var(--electric-cyan-rgb), 0.7);
+  box-shadow: 0 0 16px rgba(var(--electric-cyan-rgb), 0.3);
 }

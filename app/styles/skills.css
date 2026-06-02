@@ -240,7 +240,7 @@
   position: relative;
   border-radius: 1rem;
   background:
-    radial-gradient(circle at center, rgba(193, 55, 51, 0.14), transparent 58%),
+    radial-gradient(circle at center, rgba(var(--electric-cyan-rgb), 0.14), transparent 58%),
     rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(230, 241, 255, 0.1);
 }
@@ -258,9 +258,9 @@
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  border: 1px solid rgba(193, 55, 51, 0.5);
+  border: 1px solid rgba(var(--electric-cyan-rgb), 0.5);
     border: 1px solid var(--skills-card-accent);
-    background: rgba(193, 55, 51, 0.16);
+    background: rgba(var(--electric-cyan-rgb), 0.16);
     color: var(--skills-card-accent);
 }
 
@@ -272,7 +272,7 @@
   font-size: 0.68rem;
   border: 1px solid rgba(160, 160, 160, 0.35);
     border: 1px solid var(--skills-card-accent);
-    background: rgba(193, 55, 51, 0.10);
+    background: rgba(var(--electric-cyan-rgb), 0.10);
     color: var(--skills-card-accent);
   animation: riseIn 620ms ease both;
 }
