@@ -1,4 +1,3 @@
-
 import AboutSection from "./components/sections/AboutSection";
 import ContactSection from "./components/sections/ContactSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
@@ -8,13 +7,14 @@ import SkillsSection from "./components/sections/SkillsSection";
 import { projects, skills, timeline } from "./data/portfolioData";
 
 // Split timeline into education and work experience
-const education = timeline.filter((item) =>
-  item.title.toLowerCase().includes("bsc") ||
-  item.title.toLowerCase().includes("msc") ||
-  item.title.toLowerCase().includes("diploma") ||
-  item.title.toLowerCase().includes("certification") ||
-  item.place.toLowerCase().includes("university") ||
-  item.place.toLowerCase().includes("academy")
+const education = timeline.filter(
+  (item) =>
+    item.title.toLowerCase().includes("bsc") ||
+    item.title.toLowerCase().includes("msc") ||
+    item.title.toLowerCase().includes("diploma") ||
+    item.title.toLowerCase().includes("certification") ||
+    item.place.toLowerCase().includes("university") ||
+    item.place.toLowerCase().includes("academy"),
 );
 const work = timeline.filter((item) => !education.includes(item));
 
@@ -22,14 +22,16 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <AboutSection />      
+      <AboutSection />
       <ExperienceSection education={education} work={work} />
       <SkillsSection skills={skills} />
-      <ProjectsSection projects={projects} showAll={false}/>
+      <ProjectsSection projects={projects} showAll={false} />
       <ContactSection />
 
       <footer className="site-footer">
-        <p>Built with clarity, craft, and purpose.</p>
+        <p>
+          © {new Date().getFullYear()} Malshi Kulasinghe. All rights reserved.
+        </p>
       </footer>
     </>
   );

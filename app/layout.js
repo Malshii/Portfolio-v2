@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import TopNav from "./components/navigation/TopNav";
 import "./globals.css";
 
@@ -13,6 +14,12 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <TopNav />
         {children}
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            duration: 4000,
+          }}
+        />
       </body>
     </html>
   );
