@@ -1,9 +1,11 @@
 import AboutSection from "./components/sections/AboutSection";
+import BlogsSection from "./components/sections/BlogsSection";
 import ContactSection from "./components/sections/ContactSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import HeroSection from "./components/sections/HeroSection";
 import ProjectsSection from "./components/sections/ProjectsSection";
 import SkillsSection from "./components/sections/SkillsSection";
+import blogs from "./data/blogs";
 import { projects, skills, timeline } from "./data/portfolioData";
 
 // Split timeline into education and work experience
@@ -26,6 +28,7 @@ export default function Home() {
       <ExperienceSection education={education} work={work} />
       <SkillsSection skills={skills} />
       <ProjectsSection projects={projects} showAll={false} />
+      <BlogsSection blogs={blogs} />
       <ContactSection />
 
       <footer className="site-footer">

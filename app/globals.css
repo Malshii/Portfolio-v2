@@ -53,6 +53,9 @@ h6,
 /* Experience and timeline */
 @import "./styles/experience.css";
 
+/* Blogs section */
+@import "./styles/blogs.css";
+
 /* Contact section */
 @import "./styles/contact.css";
 
