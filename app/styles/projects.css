@@ -122,6 +122,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.75rem;
+  align-items: stretch;
 }
 
 .projects-grid.projects-grid-all {
@@ -131,20 +132,33 @@
 .project-card {
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
   border-radius: 1.3rem;
   padding: 1.1rem 1.15rem;
+
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
-    rgba(12, 12, 16, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+    ),
+    rgba(12,12,16,.92);
+
+  border: 1px solid rgba(255,255,255,.08);
+
   box-shadow:
-    0 14px 36px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    0 14px 36px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.02);
+
   transition:
-    transform 220ms ease,
-    border-color 220ms ease,
-    box-shadow 220ms ease,
-    background 220ms ease;
+    transform .22s,
+    border-color .22s,
+    box-shadow .22s;
 }
 
 .project-card::before {
@@ -315,6 +329,7 @@
   margin: 0.9rem 0 0;
   padding: 0;
   list-style: none;
+  flex: 1;
 }
 
 .project-points li {
