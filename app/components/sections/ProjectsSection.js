@@ -49,11 +49,11 @@ const splitProjectDetails = (project) => {
 };
 
 export default function ProjectsSection({ showAll = false }) {
-  const featuredTitles = [
-    "Breast Cancer Classification with Localization and Subtype Identification (Final Year Project) (Group)",
-    "Tender Automation System | 2026",
-    "GDC Properties Platform | 2026",
-    "Projex System | 2025",
+  const featuredIds = [
+    "breast-cancer-classification",
+    "tender-automation",
+    "gdc-properties",
+    "projex-system",
   ];
 
   const getAllProjects = () =>
@@ -67,7 +67,7 @@ export default function ProjectsSection({ showAll = false }) {
   } else {
     const allProjects = getAllProjects();
     const featuredProjects = allProjects.filter((project) =>
-      featuredTitles.includes(project.title),
+      featuredIds.includes(project.id),
     );
     sectionsToShow = [
       {
@@ -77,80 +77,71 @@ export default function ProjectsSection({ showAll = false }) {
     ];
   }
 
-  const totalProjects = getAllProjects().length;
-  const totalSections = projectSections.length;
-
   return (
     <section className="projects-section section-reveal" id="projects">
       <div className="projects-container">
         <div className="projects-header">
           <div className="projects-copy">
-            <p className="projects-eyebrow">Showcase</p>
+            <p className="projects-eyebrow">Projects</p>
+
             <h2 className="projects-title">
               {showAll ? "Project Archive" : "Featured Projects"}
             </h2>
+
             <p className="projects-subtitle">
               {showAll
-                ? "A complete project collection across research, product engineering, and mobile development."
-                : "A curated set of work that reflects engineering depth, product thinking, and delivery quality."}
+                ? "A complete collection of professional, academic, and research projects."
+                : "Selected projects showcasing my experience in full-stack development, enterprise software, and AI."}
             </p>
           </div>
-
-          {/* <div className="projects-summary-card" aria-label="Projects summary">
-            <div className="projects-summary-row">
-              <span className="projects-summary-label">Projects</span>
-              <span className="projects-summary-value">{totalProjects}</span>
-            </div>
-            <div className="projects-summary-row">
-              <span className="projects-summary-label">Groups</span>
-              <span className="projects-summary-value">{totalSections}</span>
-            </div>
-            <div className="projects-summary-row">
-              <span className="projects-summary-label">Visible</span>
-              <span className="projects-summary-value">
-                {sectionsToShow.reduce(
-                  (count, section) => count + section.projects.length,
-                  0,
-                )}
-              </span>
-            </div>
-          </div> */}
         </div>
 
-        {sectionsToShow.map((section, index) => (
-          <div
-            key={`${section.heading || "group"}-${section.subHeading || "main"}-${index}`}
-            className="project-group"
-          >
-            {section.heading && <h3 className="project-group-title">{section.heading}</h3>}
-            {section.subHeading && (
-              <p className="project-group-subtitle">{section.subHeading}</p>
-            )}
+        {sectionsToShow.map((section, index) => {
+          const gridClass = !showAll
+            ? "projects-grid"
+            : section.heading === "Research Experience"
+              ? "projects-grid-featured"
+              : "projects-grid-two";
 
-            <div className={`projects-grid${showAll ? " projects-grid-all" : ""}`}>
-              {section.projects.map((project, projectIndex) => {
-                const { techLine, points } = splitProjectDetails(project);
-                const projectIcons = getProjectIcons(project);
-                const toolCount = projectIcons.length || getTechList(project).length;
-                const surfaceLabel =
-                  section.subHeading || section.heading || "Featured";
+          return (
+            <div
+              key={`${section.heading || "group"}-${section.subHeading || "main"}-${index}`}
+              className="project-group"
+            >
+              {section.heading && (
+                <h3 className="project-group-title">{section.heading}</h3>
+              )}
+              {section.subHeading && (
+                <p className="project-group-subtitle">{section.subHeading}</p>
+              )}
 
-                return (
-                  <ProjectCard
-                    key={project.title}
-                    project={project}
-                    projectIndex={projectIndex}
-                    surfaceLabel={surfaceLabel}
-                    techLine={techLine}
-                    points={points}
-                    projectIcons={projectIcons}
-                    toolCount={toolCount}
-                  />
-                );
-              })}
+              <div className={gridClass}>
+                {section.projects.map((project, projectIndex) => {
+                  const { techLine, points } = splitProjectDetails(project);
+                  const projectIcons = getProjectIcons(project);
+                  const toolCount =
+                    projectIcons.length || getTechList(project).length;
+                  const surfaceLabel =
+                    section.subHeading || section.heading || "Featured";
+
+                  return (
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      projectIndex={projectIndex}
+                      surfaceLabel={surfaceLabel}
+                      techLine={techLine}
+                      points={points}
+                      projectIcons={projectIcons}
+                      toolCount={toolCount}
+                      compact={!showAll}
+                    />
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
 
         {!showAll && (
           <div className="projects-cta-wrap">

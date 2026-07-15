@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ProjectCard({
@@ -8,9 +9,12 @@ export default function ProjectCard({
   points,
   projectIcons,
   toolCount,
+  compact = false,
 }) {
-  return (
-    <article className="project-card">
+  const visiblePoints = compact ? points.slice(0, 3) : points;
+
+  const card = (
+    <article id={!compact ? project.id : undefined} className="project-card">
       <div className="project-accent-line" aria-hidden="true" />
 
       <div className="project-card-head">
@@ -55,12 +59,12 @@ export default function ProjectCard({
       )}
 
       <ul className="project-points">
-        {points.map((item) => (
+        {visiblePoints.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
 
-      {project.nested && (
+      {!compact && project.nested && (
         <div className="project-nested">
           <p className="project-nested-title">{project.nested.label}</p>
           <ul>
@@ -72,8 +76,18 @@ export default function ProjectCard({
       )}
 
       <div className="project-footer-row">
-        {techLine && <p className="project-tech-line">{techLine}</p>}
+        {!compact && techLine && (
+          <p className="project-tech-line">{techLine}</p>
+        )}
       </div>
     </article>
+  );
+
+  return compact ? (
+    <Link href={`/projects#${project.id}`} className="project-card-link">
+      {card}
+    </Link>
+  ) : (
+    card
   );
 }

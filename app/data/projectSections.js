@@ -36,6 +36,7 @@ export const projectSections = [
     heading: "Research Experience",
     projects: [
       {
+        id: "breast-cancer-classification",
         title:
           "Breast Cancer Classification with Localization and Subtype Identification (Final Year Project) (Group)",
         details: [
@@ -60,6 +61,7 @@ export const projectSections = [
     subHeading: "Industry Projects",
     projects: [
       {
+        id: "tender-automation",
         title: "Tender Automation System | 2026",
         org: "GDC Consultants Ltd.",
         details: [
@@ -74,6 +76,7 @@ export const projectSections = [
         ],
       },
       {
+        id: "gdc-properties",
         title: "GDC Properties Platform | 2026",
         org: "GDC Consultants Ltd.",
         details: [
@@ -88,6 +91,7 @@ export const projectSections = [
         ],
       },
       {
+        id: "projex-system",
         title: "Projex System | 2025",
         org: "GDC Consultants Ltd.",
         details: [
