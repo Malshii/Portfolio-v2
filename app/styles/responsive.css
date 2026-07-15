@@ -166,22 +166,37 @@
     align-items: center;
   }
 
-  .hero-highlights {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: .8rem;
-    margin-top: 1.25rem;
-    width: max-content;
-    position: relative;
-  }
-
   /* Reduce desktop overlay */
   .hero-stage::before {
     background:
       linear-gradient(180deg,
         rgba(0, 0, 0, .08) 0%,
         rgba(0, 0, 0, .02) 100%);
+  }
+
+  .hero-highlights{
+    position: relative;
+    inset: auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:.8rem;
+
+    width:100%;
+    margin-top:1.5rem;
+  }
+
+  .hero-social{
+    position:relative;
+
+    top:auto;
+    right:auto;
+    bottom:auto;
+    left:auto;
+
+    transform:none;
   }
 
 }

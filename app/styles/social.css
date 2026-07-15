@@ -25,46 +25,64 @@
   transition: 0.3s ease;
 }
 
-.hero-social svg {
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
 .hero-social:hover {
-  transform: scale(1.08);
   border-color: rgba(var(--electric-cyan-rgb), 0.7);
   box-shadow: 0 0 20px rgba(var(--electric-cyan-rgb), 0.35);
 }
 
-/* Unique positions for 6 social icons */
+.hero-social svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  transition: transform .25s ease;
+}
+
+.hero-social:hover svg {
+  transform: scale(1.15);
+}
+
+/* Top-left */
+.social-7 {
+  top: 4%;
+  left: 8%;
+}
+
+/* Top-center */
 .social-1 {
-  top: -16px;
-  left: 52px;
+  top: -12%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.social-2 {
-  bottom: -18px;
-  left: 58px;
-}
-
+/* Top-right */
 .social-3 {
-  top: -16px;
-  right: 52px;
+  top: 4%;
+  right: 8%;
 }
 
+/* Middle-left */
+.social-6 {
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+
+/* Middle-right */
 .social-4 {
   top: 50%;
-  right: -26px;
+  right: -8%;
+  transform: translateY(-50%);
 }
 
+/* Bottom-left */
+.social-2 {
+  bottom: 4%;
+  left: 12%;
+}
+
+/* Bottom-right */
 .social-5 {
-  bottom: -18px;
-  right: 52px;
-}
-
-.social-6 {
-  top: 52%;
-  left: -26px;
+  bottom: 4%;
+  right: 12%;
 }
 
 .social-row a {
