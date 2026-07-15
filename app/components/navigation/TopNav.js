@@ -1,6 +1,12 @@
+"use client";
+
+import { useState } from "react";
+import { LuMenu, LuX } from "react-icons/lu";
 import GradientText from "../ui/GradientText";
 
 export default function TopNav() {
+  const [open, setOpen] = useState(false);
+
   const menuItems = [
     { href: "/#about", label: "About" },
     { href: "/#skills", label: "Skills" },
@@ -15,9 +21,23 @@ export default function TopNav() {
         <a href="/" className="brand">
           Malshi Dev
         </a>
-        <nav>
+
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation"
+        >
+          {open ? <LuX /> : <LuMenu />}
+        </button>
+
+        <nav className={open ? "nav-open" : ""}>
           {menuItems.map((item) => (
-            <a href={item.href} key={item.href} className="nav-link-gradient">
+            <a
+              key={item.href}
+              href={item.href}
+              className="nav-link-gradient"
+              onClick={() => setOpen(false)}
+            >
               <GradientText
                 className="nav-gradient-text"
                 colors={[
@@ -28,16 +48,28 @@ export default function TopNav() {
                 ]}
                 animationSpeed={6}
                 direction="horizontal"
-                pauseOnHover={true}
-                yoyo={true}
-                showBorder={false}
+                pauseOnHover
+                yoyo
               >
                 {item.label}
               </GradientText>
             </a>
           ))}
+
+          <a
+            href="/resume.pdf"
+            className="nav-cta nav-mobile-cta"
+            target="_blank"
+          >
+            Resume
+          </a>
         </nav>
-        <a href="/resume.pdf" className="nav-cta" download>
+
+        <a
+          href="/resume.pdf"
+          className="nav-cta nav-desktop-cta"
+          target="_blank"
+        >
           Resume
         </a>
       </div>

@@ -1,6 +1,6 @@
 /* Limit the width of the hero summary paragraph for better readability */
 .hero-summary {
-  max-width: 550px;
+  max-width:55ch;
   margin: 0.45rem auto 0;
   color: var(--soft-white);
   font-weight: 500;
@@ -9,7 +9,7 @@
 /* --- HERO SECTION CUSTOM STYLES (HIGH SPECIFICITY) --- */
 .hero-copy h1.hero-title {
   font-family: "Montserrat", "Montserrat Fallback", sans-serif;
-  font-size: clamp(2.5rem, 5.5vw, 4.4rem);
+  font-size:clamp(2.7rem,5vw,4.5rem);
   font-weight: 600;
   line-height: 1.06;
   margin: 0.5rem 0 0;
@@ -29,26 +29,45 @@
   max-width: 600px;
   color: var(--soft-white);
 }
+
 .hero-actions {
   display: flex;
+  align-items: center;
   gap: 1rem;
   margin-top: 1.6rem;
+  flex-wrap: wrap;
 }
-.hero-actions .btn.hero-latestwork-btn {
-  display: flex;
+
+.hero-actions .btn,
+.hero-actions .btn-primary-cta {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+
+.hero-actions .btn.hero-latestwork-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+
   border: 2px solid var(--soft-white);
   color: var(--soft-white);
   background: transparent;
+
+  padding: .85rem 1.8rem;
+  border-radius: 999px;
+
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 2rem;
-  padding: 0.75rem 2.5rem;
-  font-size: 1.1rem;
-  transition:
-    border-color 0.2s,
-    color 0.2s;
+
+  transition: .25s;
 }
+
+
 .hero-actions .btn.hero-latestwork-btn:hover {
   border-color: var(--electric-cyan);
   color: var(--electric-cyan);
@@ -61,7 +80,6 @@
 /* Hero section and profile image styles */
 
 .hero-stage {
-  position: relative;
   width: 100%;
   min-height: 100svh;
   height: auto;
@@ -104,12 +122,12 @@
   position: relative;
   width: min(1180px, 100%);
   margin: 0 auto;
-  /* padding-left: clamp(0.75rem, 2.2vw, 2rem);
-  padding-right: clamp(0.75rem, 2.2vw, 2rem); */
+
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 /* .portfolio-shell {
@@ -129,6 +147,7 @@
   grid-template-columns: 1fr 1.2fr;
   position: relative;
   padding: clamp(8rem, 9vh, 7rem) 0 0;
+  padding-top:8rem;
 }
 
 .hero::before {
@@ -174,14 +193,6 @@
   color: var(--electric-cyan);
 }
 
-.hero-actions {
-  margin-top: 1.6rem;
-}
-
-.hero-actions .btn {
-  min-width: 150px;
-}
-
 .hero-center {
   display: grid;
   place-items: center;
@@ -192,7 +203,7 @@
 
 .hero-image-wrapper {
   position: relative;
-  width: min(420px, 78vw);
+  width: clamp(260px, 38vw, 430px);
   aspect-ratio: 21 / 26;
   height: auto;
   overflow: visible;

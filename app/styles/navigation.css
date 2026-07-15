@@ -1,33 +1,31 @@
 /* Navigation and header styles */
-.navbar{
+.navbar {
   position: relative;
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 4rem);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  padding-inline: clamp(1rem, 4vw, 4rem);
+  box-sizing: border-box;
 }
 
 .top-nav {
-  position: absolute;
+  position: relative;
   top: 1.25rem;
-  left: 0;
-  right: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: clamp(1rem, 2vw, 1.5rem);
-  padding-right: clamp(1rem, 2vw, 1.5rem);
-  z-index: 100;
-  width: 100%;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.32);
+
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  padding: 1rem 1.5rem;
+
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
+
+  background: rgba(0,0,0,.32);
+  z-index: 100;  
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+
+  /* left: 0;
+  right: 0;   */
 }
 
 .top-nav nav {
@@ -97,4 +95,21 @@
 
 .nav-cta:hover {
   box-shadow: 0 0 18px rgba(var(--electric-cyan-rgb), 0.28);
+}
+
+.mobile-menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.nav-desktop-cta {
+  display: inline-flex;
+}
+
+.nav-mobile-cta {
+  display: none;
 }
