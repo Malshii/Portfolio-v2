@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
 
-import { categoryLabels, skills, skillsByCategory } from "../../data/skillsData";
+import {
+  categoryLabels,
+  skills,
+  skillsByCategory,
+} from "../../data/skillsData";
 
 export default function SkillsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -10,21 +14,18 @@ export default function SkillsSection() {
     displayedSkills = skillsByCategory[selectedCategory] || [];
   }
 
-  const totalSkills = skills.length;
-  const totalCategories = Object.keys(skillsByCategory).length;
-
   return (
     <section className="skills-section section-reveal" id="skills">
       <div className="skills-container">
         <div className="skills-header">
           <div className="skills-copy">
-            <p className="skills-eyebrow">Toolkit</p>
-            <h2 className="skills-title">Technical skills with product focus</h2>
+            <p className="skills-eyebrow">Technical Expertise</p>
+
+            <h2 className="skills-title">Technologies I work with</h2>
+
             <p className="section-subtitle skills-subtitle">
-              A curated set of technologies I use to design, build, and ship
-              reliable digital products. The layout is grouped for quick
-              scanning so recruiters and clients can understand strengths at a
-              glance.
+              The languages, frameworks, databases, cloud platforms, and tools I
+              use to build scalable, high-quality software solutions.
             </p>
           </div>
         </div>
