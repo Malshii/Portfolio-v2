@@ -49,7 +49,7 @@ export const skills = [
   },
   {
     title: "MongoDB",
-    icon: "https://icon-icons.com/download-file?file=https%3A%2F%2Fimages.icon-icons.com%2F2415%2FPNG%2F512%2Fmongodb_original_wordmark_logo_icon_146425.png&id=146425&pack_or_individual=pack",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/00/Mongodb.png",
   },
   {
     title: "Flutter",

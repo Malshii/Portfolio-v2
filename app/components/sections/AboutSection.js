@@ -1,6 +1,11 @@
 import React from "react";
 import BorderGlow from "../ui/BorderGlow";
-import { LuSmartphone, LuPalette, LuCodeXml, LuLaptopMinimal } from "react-icons/lu";
+import {
+  LuSmartphone,
+  LuPalette,
+  LuCodeXml,
+  LuLaptopMinimal,
+} from "react-icons/lu";
 
 export default function AboutSection() {
   return (
@@ -99,9 +104,10 @@ export default function AboutSection() {
               <span className="about-icon">
                 <LuPalette aria-hidden="true" />
               </span>
-              <span className="about-service-title">Creative Designer</span>
+              <span className="about-service-title">UI & System Design</span>
+
               <p className="about-service-description">
-                Crafting visually stunning designs for digital and print media.
+                Reusable components and intuitive user experiences.
               </p>
             </div>
           </BorderGlow>
@@ -112,26 +118,27 @@ export default function AboutSection() {
           {/* <p className="about-eyebrow">Preview</p> */}
           <h2 className="about-title">About me</h2>
           <p className="about-description">
-            I design and build scalable digital experiences that feel clear,
-            useful, and polished. My focus is full-stack engineering with a
-            strong eye for user experience, maintainability, and product value.
-            I enjoy turning complex requirements into simple interfaces that
-            people can understand quickly and use comfortably.
+            Full Stack Software Engineer specializing in React, Next.js,
+            Node.js, and modern web technologies. I build scalable, user-focused
+            applications with clean architecture and reliable performance.
           </p>
 
           <div className="about-preview-card">
             <div className="about-preview-header">
               <div>
                 <span className="about-preview-label">Current focus</span>
-                <h3>Premium web experiences with reliable engineering</h3>
+                <h3>
+                  Building scalable full-stack applications for real-world
+                  businesses
+                </h3>
               </div>
               <div className="about-preview-chip">Open to opportunities</div>
             </div>
 
             <ul className="about-highlights">
-              <li>Responsive UI systems with clean hierarchy</li>
-              <li>Full-stack builds with maintainable structure</li>
-              <li>Product-minded details that improve usability</li>
+              <li>React, Next.js & Node.js development</li>
+              <li>Reusable UI & scalable architecture</li>
+              <li>API integrations & database solutions</li>
             </ul>
           </div>
 
@@ -146,7 +153,9 @@ export default function AboutSection() {
               <span className="about-stat-number">
                 2 <span className="about-stat-accent">+</span>
               </span>
-              <span className="about-stat-label">Years Industry Experience</span>
+              <span className="about-stat-label">
+                Years Industry Experience
+              </span>
             </div>
           </div>
         </div>
