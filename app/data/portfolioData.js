@@ -33,32 +33,32 @@ export const skills = [
 
 export const timeline = [
   {
-    year: "2025 - Present",
+    year: "Sep 2024 - Present",
     title: "Software Engineer",
-    place: "NovaEdge Technologies",
+    place: "GDC Consultants Ltd.",
     details:
-      "Building scalable full-stack products, leading feature delivery, and improving product performance across web platforms.",
+      "Developing full-stack applications with ReactJS, Next.js, Redux, Node.js, MySQL, and Azure.",
   },
   {
-    year: "2024",
-    title: "Cloud & DevOps Certification",
-    place: "AWS Academy",
-    details:
-      "Completed cloud architecture and deployment training with CI/CD and infrastructure fundamentals.",
-  },
-  {
-    year: "2022 - 2024",
+    year: "Dec 2022 - Jun 2023",
     title: "Software Engineering Intern",
-    place: "CodeCraft Labs",
+    place: "HasthiyaIT (Pvt) Ltd.",
     details:
-      "Contributed to React and Node.js applications, collaborated with design teams, and shipped features to production.",
+      "Built web and mobile applications using ReactJS, Flutter, Node.js, and MySQL in Agile teams.",
   },
   {
-    year: "2019 - 2023",
-    title: "BSc in Information Technology",
-    place: "University of Colombo",
+    year: "Jun 2023 - Jun 2024",
+    title: "AI Research Project",
+    place: "University of Moratuwa",
     details:
-      "Focused on software engineering, data systems, and human-centered digital product development.",
+      "Developed deep learning models for breast cancer classification with 96.5% accuracy.",
+  },
+  {
+    year: "2020 - 2024",
+    title: "BSc (Hons.) Information Technology & Management",
+    place: "University of Moratuwa",
+    details:
+      "Graduated with a CGPA of 3.38/4.20, specializing in software engineering and AI research.",
   },
 ];
 

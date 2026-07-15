@@ -8,8 +8,9 @@ export default function ExperienceSection({ education = [], work = [] }) {
           <p className="experience-eyebrow">Journey</p>
           <h2>Experience &amp; Education</h2>
           <p className="experience-intro">
-            A clean, premium overview of the roles and milestones that shaped my
-            work. Expand each card to see the supporting detail.
+            From university research to industry experience, each step has
+            strengthened my skills in building scalable, user-focused software
+            solutions.
           </p>
         </div>
 
