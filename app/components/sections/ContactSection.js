@@ -155,7 +155,7 @@ export default function ContactSection() {
 
             <div className="contact-social-row" aria-label="Social links">
               <a
-                href="https://linkedin.com/in/malshi/"
+                href="https://linkedin.com/in/malshii/"
                 target="_blank"
                 rel="noreferrer"
               >
