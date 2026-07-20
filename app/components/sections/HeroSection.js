@@ -58,7 +58,7 @@ export default function HeroSection() {
               {/* Facebook */}
               <a
                 className="hero-social social-1"
-                href="https://facebook.com"
+                href="https://facebook.com/malshiik"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
@@ -112,7 +112,7 @@ export default function HeroSection() {
               {/* LinkedIn */}
               <a
                 className="hero-social social-4"
-                href="https://linkedin.com/in/malshi/"
+                href="https://linkedin.com/in/malshii/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -150,7 +150,7 @@ export default function HeroSection() {
               {/* Medium */}
               <a
                 className="hero-social social-6"
-                href="https://medium.com/@Malshii.medium.com"
+                href="https://medium.com/@Malshii"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Medium"
